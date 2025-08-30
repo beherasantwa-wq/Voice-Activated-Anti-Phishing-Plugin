@@ -1,0 +1,17 @@
+User clicks: "go0gle.com"
+↓
+content.js detects click
+↓
+Checks phishing_domains.json
+↓
+Found in blacklist → Risk score: 85/100
+↓
+DECISION: BLOCK 🚫
+↓
+VOICE: "Critical warning! This is phishing!"
+↓  
+POPUP: Shows warning message
+↓
+LOGGING: Saves this event
+↓
+USER: Chooses to cancel ❌
