@@ -1,0 +1,11 @@
+┌─────────────────────────────────────────────────┐
+│                 EXTENSION WORKFLOW              │
+├─────────────────────────────────────────────────┤
+│ 1. User clicks any link on webpage              │
+│ 2. content.js detects the click                 │
+│ 3. Checks URL against phishing_domains.json     │
+│ 4. Calculates risk score (0-100)                │
+│ 5. If risky → Blocks navigation + Voice alert   │
+│ 6. If safe → Allows navigation                  │
+│ 7. Logs all activities                          │
+└─────────────────────────────────────────────────┘
