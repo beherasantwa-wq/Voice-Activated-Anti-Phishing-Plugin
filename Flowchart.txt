@@ -1,0 +1,13 @@
+voice-anti-phishing-extension/
+├── 📄 manifest.json
+├── 📄 content.js
+├── 📂 data/
+│   └── 📄 phishing_domains.json
+├── 📂 popup/
+│   ├── 📄 popup.html
+│   ├── 📄 popup.css
+│   └── 📄 popup.js
+└── 📂 icons/ (optional)
+    ├── 📄 icon16.png
+    ├── 📄 icon48.png
+    └── 📄 icon128.png
