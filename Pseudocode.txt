@@ -1,0 +1,49 @@
+FUNCTION analyzeLink(url)
+    riskScore ← evaluateRisk(url)          // Regex, blacklist, patterns
+    alertMessage ← determineMessage(riskScore)
+
+    IF alertMessage IS NOT EMPTY THEN
+        CALL voiceAlert(alertMessage)
+        CALL logEvent(url, riskScore, alertMessage)
+        CALL showNotification(alertMessage)
+    END IF
+END FUNCTION
+
+
+FUNCTION determineMessage(riskScore)
+    IF riskScore ≥ 80 THEN
+        RETURN "Critical Warning! This site is highly unsafe."
+    ELSE IF riskScore ≥ 50 THEN
+        RETURN "Warning! This site shows phishing characteristics."
+    ELSE IF riskScore ≥ 20 THEN
+        RETURN "Caution! This link may be risky."
+    ELSE
+        RETURN ""   // Safe, no alert
+    END IF
+END FUNCTION
+
+
+FUNCTION voiceAlert(message)
+    speechEngine ← INITIALIZE SpeechSynthesis
+    SET speechEngine.language TO "en-IN"
+    speechEngine.speak(message)
+END FUNCTION
+
+
+FUNCTION logEvent(url, riskScore, message)
+    STORE (url, riskScore, message, timestamp) IN alertLogs
+END FUNCTION
+
+
+FUNCTION showNotification(message)
+    DISPLAY popupBox(message) ON SCREEN
+END FUNCTION
+
+
+MAIN
+    ON userClick(link)
+        CALL analyzeLink(link.URL)
+    END ON
+END MAIN
+
+ye sudo code step by step explain karna jara
