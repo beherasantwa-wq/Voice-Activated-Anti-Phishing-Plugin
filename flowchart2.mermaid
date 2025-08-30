@@ -1,0 +1,29 @@
+flowchart TD
+    A[Create Extension Folder Structure] --> B[Create manifest.json<br>Basic extension configuration];
+    A --> C[Create content.js<br>Phishing detection + voice alerts];
+    A --> D[Create popup/popup.html<br>Two-tab interface];
+    A --> E[Create popup/popup.css<br>Styling for both tabs];
+    A --> F[Create popup/popup.js<br>Tab switching logic];
+
+    B & C & D & E & F --> G[Load Extension in Chrome];
+    
+    G --> H[Go to chrome://extensions/];
+    H --> I[Enable Developer Mode];
+    I --> J[Click Load Unpacked];
+    J --> K[Select Extension Folder];
+    
+    K --> L[Test Extension];
+    L --> M[Visit any website];
+    M --> N[Try suspicious link<br>e.g. go0gle.com];
+    N --> O[Verify voice alert plays];
+    L --> P[Click extension icon];
+    P --> Q[Test both tabs];
+    Q --> R[Test Alert button];
+    Q --> S[Test Voice button];
+    
+    L --> T[Demo to Teacher];
+    T --> U[Show extension loaded];
+    T --> V[Demonstrate both tabs];
+    T --> W[Test voice functionality];
+    T --> X[Show phishing detection];
+    T --> Y[Explain accessibility features];
