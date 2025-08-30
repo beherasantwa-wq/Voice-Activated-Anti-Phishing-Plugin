@@ -45,5 +45,3 @@ MAIN
         CALL analyzeLink(link.URL)
     END ON
 END MAIN
-
-ye sudo code step by step explain karna jara
