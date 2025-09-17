@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Suraksha Anti-Phishing",
+  "version": "2.0",
+  "description": "Popup-only anti-phishing detection with smooth voice alerts.",
+  "permissions": ["tabs", "storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "assets/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"]
+}
